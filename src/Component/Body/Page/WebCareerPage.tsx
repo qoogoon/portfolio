@@ -2,15 +2,20 @@ import React from "react"
 import "./WebCareerPage.css"
 import IntroImage from "Resource/intro.png"
 import { Card, CardContent, Typography } from "@material-ui/core"
+import {
+    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+} from 'recharts';
+//#region Component
+import ImageSlideDialog from "../../Common/ImageSlideDialog"
+//#endregion
+
 import MabinogiImg from "../../../Resource/mabinogi.png"
 import AndroidImg from "../../../Resource/android.png"
 import ReactImg from "../../../Resource/react.png"
 import CareerImg from "../../../Resource/career.png"
 import HomeImg from "../../../Resource/home.png"
 import HobbyImg from "../../../Resource/hobby.png"
-import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
+
 
 interface CardItem {
     title: string;
@@ -34,13 +39,14 @@ const data = [
 ];
 
 function WebCareerPage() {
+    const [isImgPortfolioOpen, setImgPortfolioOpen] = React.useState(false);
     return (
         <div className="webCareer Career">
             <div className="title">{"Web Skill & Project"}</div>
             <div className="skill">
                 <div className="layout ability">
                     <div className="subTitle">Ability</div>
-                    <ResponsiveContainer width="95%" height={400}>
+                    {/* <ResponsiveContainer width="95%" height={400}>
                         <BarChart
                             data={data}
                             margin={{
@@ -54,7 +60,7 @@ function WebCareerPage() {
                             <Legend />
                             <Bar dataKey="level" fill="#8884d8" max={5} />
                         </BarChart>
-                    </ResponsiveContainer>
+                    </ResponsiveContainer> */}
 
                 </div>
                 <div className="layout language">
@@ -62,10 +68,25 @@ function WebCareerPage() {
                 </div>
             </div>
             <div className="project">
-                <div className="item"></div>
+                <div className="item" onClick={() => {
+                    setImgPortfolioOpen(true)
+                }}></div>
                 <div className="item"></div>
                 <div className="item"></div>
             </div>
+            <ImageSlideDialog
+                open={isImgPortfolioOpen}
+                onClose={() => { setImgPortfolioOpen(false) }}
+                imgList={[MabinogiImg
+                    , AndroidImg
+                    , ReactImg
+                    , CareerImg
+                    , HomeImg
+                    , HobbyImg]} />
+            {/* <ImageSlideDialog
+                open={isImgPortfolioOpen}
+                onClose={() => { setImgPortfolioOpen(false) }}
+                imgList={[MabinogiImg]} /> */}
         </div>
     )
 }

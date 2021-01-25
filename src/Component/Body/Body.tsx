@@ -21,7 +21,7 @@ export default function Body() {
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
         >
-            <SwiperSlide style={{ height: "100vh", width: "100%" }}><IntroPage /></SwiperSlide>
+            {/* <SwiperSlide style={{ height: "100vh", width: "100%" }}><IntroPage /></SwiperSlide> */}
             <SwiperSlide style={{ height: "100vh", width: "100%" }}><WebCareerPage /></SwiperSlide>
             <SwiperSlide style={{ height: "100vh", width: "100%" }}>Slide 3</SwiperSlide>
         </Swiper>)
