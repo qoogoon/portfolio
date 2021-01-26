@@ -1,5 +1,5 @@
 .Career {
-    background-color: rgb(236, 241, 255);
+    background-color: rgb(248, 250, 255);
     height: 100vh;
     padding: 50px;
 }
@@ -7,8 +7,8 @@
 .Career>.title {
     height: max-content;
     font-weight: bold;
-    font-size: 18px;
-    color: rgb(41, 41, 41);
+    font-size: 24px;
+    color: rgb(73, 73, 73);
     text-align: left;
     padding-bottom: 20px;
 }
@@ -18,7 +18,8 @@
     font-weight: bold;
     font-size: 16px;
     color: rgb(100, 100, 100);
-    text-align: left;
+    text-align: left !important;
+    margin-left: 40px;
     margin-top: 30px;
     text-align: center;
 }
@@ -31,7 +32,7 @@
 
 .Career>.skill>.layout {
     background-color: white;
-    box-shadow: 1px 1px 1px rgb(141, 141, 141);
+    box-shadow: 0px 0px 1.5px rgb(37, 37, 37);
     height: 50vh;
     /* line-height: 50vh; */
     margin-bottom: 30px;
@@ -64,5 +65,5 @@
     background-color: white;
     height: 100%;
     width: 32%;
-    box-shadow: 1px 1px 1px rgb(141, 141, 141);
+    box-shadow: 0px 0px 1.5px rgb(37, 37, 37);
 }

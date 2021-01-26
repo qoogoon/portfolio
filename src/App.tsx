@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from './logo.svg';
-import './App.css';
+import style from './App.module.scss';
 import Header from "./Component/Header/Header"
 import Body from "./Component/Body/Body"
 
@@ -17,7 +17,7 @@ function App() {
   };
   return (
 
-    <div className="App">
+    <div className={`${style['App']}`}>
       <Body />
     </div>
   );

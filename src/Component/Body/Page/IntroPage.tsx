@@ -1,5 +1,5 @@
 import React from "react"
-import "./IntroPage.css"
+import style from "./IntroPage.module.scss"
 import IntroImage from "Resource/intro.png"
 import { Card, CardContent, Typography } from "@material-ui/core"
 import AddIcon from "@material-ui/icons/Add";
@@ -51,10 +51,10 @@ const cards: CardItem[] = [
 
 function IntroPage() {
     return (
-        <div className="intro">
-            <div className="layout title">
+        <div className={`${style['intro']}`}>
+            <div className={`${style['layout title']}`}>
                 <img src={IntroImage} />
-                <div className="text">
+                <div className={`${style['text']}`}>
                     <div>
                         {"안녕하세요!"}
                     </div>
@@ -68,17 +68,17 @@ function IntroPage() {
                     </div>
                 </div>
             </div>
-            <div className="layout summary">
-                <div className="about" >
-                    <div className="text">{"About me"}</div>
-                    <div className="line" />
+            <div className={`${style['layout summary']}`}>
+                <div className={`${style['about']}`} >
+                    <div className={`${style['text']}`}>{"About me"}</div>
+                    <div className={`${style['line']}`} />
                 </div>
 
                 <div className="cards" >{cards.map((card, index) => {
                     if (index % 3 === 0) {
 
                     }
-                    return <Card className="item" title={card.title} >
+                    return <Card className={`${style['item']}`} title={card.title} >
                         <CardContent>
                             {card.imgSrc !== undefined ? <img src={card.imgSrc} /> : null}
                             <Typography color="textSecondary" gutterBottom style={{ fontWeight: "bold" }}
