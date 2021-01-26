@@ -2,6 +2,7 @@ import React from "react"
 //#region component
 import IntroPage from "./Page/IntroPage"
 import WebCareerPage from "./Page/WebCareerPage"
+import MobileCareerPage from "./Page/MobileCareerPage"
 //#endregion
 
 //#region Swiper.js
@@ -21,9 +22,9 @@ export default function Body() {
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
         >
-            {/* <SwiperSlide style={{ height: "100vh", width: "100%" }}><IntroPage /></SwiperSlide> */}
+            <SwiperSlide style={{ height: "100vh", width: "100%" }}><IntroPage /></SwiperSlide>
             <SwiperSlide style={{ height: "100vh", width: "100%" }}><WebCareerPage /></SwiperSlide>
-            <SwiperSlide style={{ height: "100vh", width: "100%" }}>Slide 3</SwiperSlide>
+            <SwiperSlide style={{ height: "100vh", width: "100%" }}><MobileCareerPage /></SwiperSlide>
         </Swiper>)
 }
 

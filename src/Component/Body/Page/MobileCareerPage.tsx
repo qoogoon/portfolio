@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./WebCareerPage.module.scss"
+
 //#region Component
 import ImageSlideDialog from "../../Common/ImageSlideDialog"
 import PortfolioCard, { PortfolioData } from "./PortfolioCard"
@@ -27,6 +28,8 @@ interface CardItem {
     content: string;
     imgSrc?: string;
 }
+
+
 
 const abilityData: CareerGraphData[] = [
     { name: 'FrontEnd', level: 4 },
@@ -76,7 +79,7 @@ const webPortfolio3: PortfolioData = {
     title: "오덕 테스트 커뮤니티 반응형 웹"
 }
 
-function WebCareerPage() {
+function MobileCareerPage() {
     const [isImgPortfolioOpen, setImgPortfolioOpen] = React.useState(false);
     const [imgRouteList, setImgRouteList] = React.useState<string[]>([]);
     const [imgMode, setImgMode] = React.useState<"web" | "mobile">("web");
@@ -122,4 +125,6 @@ function WebCareerPage() {
         </div>
     )
 }
-export default WebCareerPage
+
+
+export default MobileCareerPage
