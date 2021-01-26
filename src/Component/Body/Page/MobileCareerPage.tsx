@@ -1,5 +1,6 @@
 import React from "react"
-import style from "./WebCareerPage.module.scss"
+import style from "./CareerPage.module.scss"
+import styleMobile from "./MobileCareerPage.module.scss"
 
 //#region Component
 import ImageSlideDialog from "../../Common/ImageSlideDialog"
@@ -15,13 +16,6 @@ import WebImg005 from "../../../Resource/web/phc/005.jpg"
 
 import WebImg101 from "../../../Resource/web/novel/001.png"
 import WebImg201 from "../../../Resource/web/otaku/001.png"
-
-
-import MobileImg1 from "../../../Resource/mobile/udmpop/01.jpg"
-import MobileImg2 from "../../../Resource/mobile/udmpop/02.jpg"
-import MobileImg3 from "../../../Resource/mobile/udmpop/03.jpg"
-import MobileImg4 from "../../../Resource/mobile/udmpop/04.jpg"
-import MobileImg5 from "../../../Resource/mobile/udmpop/05.jpg"
 
 interface CardItem {
     title: string;
@@ -84,7 +78,7 @@ function MobileCareerPage() {
     const [imgRouteList, setImgRouteList] = React.useState<string[]>([]);
     const [imgMode, setImgMode] = React.useState<"web" | "mobile">("web");
     return (
-        <div className={style.Career}>
+        <div className={`${style.Career} ${styleMobile.Career}`}>
             <div className={style.title}>{"Web Skill & Project"}</div>
             <div className={style.skill}>
                 <div className={`${style.layout} ${style.ability}`} >
