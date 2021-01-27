@@ -35,14 +35,13 @@ const skillData: CareerGraphData[] = [
     { name: 'MSSQL', level: 3.5 },
     { name: 'Redux', level: 3 },
     { name: 'ASP.NET', level: 3 },
-    { name: 'PostgreSQL', level: 2.5 },
     { name: 'CSS', level: 2.5 },
     { name: 'SCSS', level: 1 },
 ];
 const webPortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
     descripts:
-        [`현대 1차벤더 조립라인의 데이터를 정보화하여 DashBoard 및 분석도구 제공.`,
+        [`현대 1차벤더 조립라인의 데이터를 정보화하여 실시간 정보 및 분석도구 제공.`,
             `실시간으로 쏟아져나오는 라인의 데이터를 가공하여, 사용자에게 표와 그래프로 정보를 가공.`],
     devDate: "2020/05/03 ~ 2021/01/26",
     skill: "#React #ASP.NET #MSSQL #SCSS",
@@ -88,19 +87,19 @@ function WebCareerPage() {
                 </div>
             </div>
             <div className={style.project}>
-                <PortfolioCard className={style.item} data={webPortfolio1} onClick={
+                <PortfolioCard className={style.item} data={webPortfolio1} type="web" onClick={
                     () => {
                         setImgPortfolioOpen(true)
                         setImgRouteList([WebImg001, WebImg002, WebImg003, WebImg004, WebImg005])
                         setImgMode("web")
                     }
                 } />
-                <PortfolioCard className={style.item} data={webPortfolio3} onClick={
+                <PortfolioCard className={style.item} data={webPortfolio3} type="web" onClick={
                     () => {
                         window.location.assign("https://www.otakutest.kr");
                     }
                 } />
-                <PortfolioCard className={style.item} data={webPortfolio2} onClick={
+                <PortfolioCard className={style.item} data={webPortfolio2} type="web" onClick={
                     () => {
                         window.location.assign("http://www.kumestudio.com:8080");
 

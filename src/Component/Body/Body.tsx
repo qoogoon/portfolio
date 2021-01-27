@@ -3,6 +3,8 @@ import React from "react"
 import IntroPage from "./Page/IntroPage"
 import WebCareerPage from "./Page/WebCareerPage"
 import MobileCareerPage from "./Page/MobileCareerPage"
+import ContactPage from "./Page/ContactPage"
+
 //#endregion
 
 //#region Swiper.js
@@ -25,6 +27,7 @@ export default function Body() {
             <SwiperSlide style={{ height: "100vh", width: "100%" }}><IntroPage /></SwiperSlide>
             <SwiperSlide style={{ height: "100vh", width: "100%" }}><WebCareerPage /></SwiperSlide>
             <SwiperSlide style={{ height: "100vh", width: "100%" }}><MobileCareerPage /></SwiperSlide>
+            <SwiperSlide style={{ height: "100vh", width: "100%" }}><ContactPage /></SwiperSlide>
         </Swiper>)
 }
 

@@ -8,6 +8,22 @@ import PortfolioCard, { PortfolioData } from "./PortfolioCard"
 import CareerGraph, { CareerGraphData } from "./CareerGraph"
 //#endregion
 
+
+import MobileImg001 from "../../../Resource/mobile/phc/001.jpg"
+import MobileImg002 from "../../../Resource/mobile/phc/002.jpg"
+import MobileImg003 from "../../../Resource/mobile/phc/003.jpg"
+import MobileImg004 from "../../../Resource/mobile/phc/004.jpg"
+import MobileThumbImg001 from "../../../Resource/mobile/phc/thumb.png"
+
+import MobileImg101 from "../../../Resource/mobile/udmpop/001.jpg"
+import MobileImg102 from "../../../Resource/mobile/udmpop/002.jpg"
+import MobileImg103 from "../../../Resource/mobile/udmpop/003.jpg"
+import MobileImg104 from "../../../Resource/mobile/udmpop/004.jpg"
+import MobileImg105 from "../../../Resource/mobile/udmpop/005.png"
+import MobileImg106 from "../../../Resource/mobile/udmpop/006.png"
+import MobileImg107 from "../../../Resource/mobile/udmpop/007.png"
+import MobileThumbImg002 from "../../../Resource/mobile/udmpop/thumb.png"
+
 import WebImg001 from "../../../Resource/web/phc/001.jpg"
 import WebImg002 from "../../../Resource/web/phc/002.jpg"
 import WebImg003 from "../../../Resource/web/phc/003.jpg"
@@ -27,27 +43,24 @@ const skillData: CareerGraphData[] = [
     { name: 'MSSQL', level: 3.5 },
     { name: 'RXAndroid', level: 3 },
     { name: 'ASP.NET', level: 3 },
-    { name: 'PostgreSQL', level: 2.5 },
 ];
-const webPortfolio1: PortfolioData = {
+const mobilePortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
     descripts:
-        [`현대 1차벤더 조립라인의 데이터를 정보화하여 DashBoard 및 분석도구 제공.`,
-            `실시간으로 쏟아져나오는 라인의 데이터를 가공하여, 사용자에게 표와 그래프로 정보를 가공.`],
-    devDate: "2020/05/03 ~ 2021/01/26",
-    skill: "#React #ASP.NET #MSSQL #SCSS",
-    thumbNailImgSrc: WebImg001,
-    title: "스마트팩토리\nDashBoard & Analysis"
+        [`현대 1차벤더 조립라인의 데이터를 정보화하여 실시간 데이터 및 분석도구 제공.`,],
+    devDate: "2018/09 ~ 2019/04",
+    skill: "#Kotlin #MVVM #RXJava #Retrofit2 #MSSQL #NodeJS express, #FCM",
+    thumbNailImgSrc: MobileThumbImg001,
+    title: "스마트팩토리 Mobile"
 }
-const webPortfolio2: PortfolioData = {
-    company: "개인프로젝트(개발중)",
+const mobilePortfolio2: PortfolioData = {
+    company: "근무처 : 유디엠텍",
     descripts:
-        [`웹사이트에서 게임을 만들고 모바일 앱에서 즐기는 어플리케이션`, `소설 어드벤쳐 게임인 서울2033을 오마주.`,
-            ``],
-    devDate: "2020/03/03 ~ ",
-    skill: "#React #Redux #Konvajs #FireStore(NoSql) #Firebase Function(NoServer) ",
-    thumbNailImgSrc: WebImg101,
-    title: "소설게임 생성툴"
+        [`MES 시스템을 모바일로 처리 및 조회.`, `핸드폰, 테블릿, PDA(Android) 지원.`],
+    devDate: "2020-01 ~ 2020-04",
+    skill: "#Kotlin #MVVM #RXJava #Retrofit2 #MSSQL #NodeJS express",
+    thumbNailImgSrc: MobileThumbImg002,
+    title: "MES System Mobile"
 }
 const webPortfolio3: PortfolioData = {
     company: "개인프로젝트",
@@ -73,25 +86,30 @@ function MobileCareerPage() {
                     <CareerGraph data={skillData} barColor={"#84bb74"} />
                 </div>
                 <div className={`${style.layout} ${styleMobile.timeline}`}>
-                    {/* <img src={TimeLineImg} /> */}
-                    {/* <div className={`${style['subTitle']}`}>Skill</div>
-                    <CareerGraph data={skillData} barColor={"#84bb74"} /> */}
+                    <PortfolioCard className={style.item} data={mobilePortfolio2} type="mobile" onClick={
+                        () => {
+                            window.location.assign("http://www.kumestudio.com:8080");
+
+                        }
+                    } />
                 </div>
             </div>
             <div className={style.project}>
-                <PortfolioCard className={style.item} data={webPortfolio1} onClick={
+                <PortfolioCard className={style.item} data={mobilePortfolio1} type="mobile" onClick={
                     () => {
                         setImgPortfolioOpen(true)
-                        setImgRouteList([WebImg001, WebImg002, WebImg003, WebImg004, WebImg005])
-                        setImgMode("web")
+                        setImgRouteList([MobileImg001, MobileImg002, MobileImg003, MobileImg004])
+                        setImgMode("mobile")
                     }
                 } />
-                <PortfolioCard className={style.item} data={webPortfolio3} onClick={
+                <PortfolioCard className={style.item} data={mobilePortfolio2} type="mobile" onClick={
                     () => {
-                        window.location.assign("https://www.otakutest.kr");
+                        setImgPortfolioOpen(true)
+                        setImgRouteList([MobileImg101, MobileImg102, MobileImg103, MobileImg105, MobileImg106, MobileImg107])
+                        setImgMode("mobile")
                     }
                 } />
-                <PortfolioCard className={style.item} data={webPortfolio2} onClick={
+                <PortfolioCard className={style.item} data={mobilePortfolio2} type="mobile" onClick={
                     () => {
                         window.location.assign("http://www.kumestudio.com:8080");
 

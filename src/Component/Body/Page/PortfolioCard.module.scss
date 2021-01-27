@@ -10,7 +10,7 @@
     justify-content: space-between;
     width: 60%;
     height: auto;
-    padding: 8% 5% 8% 5% ;
+    padding: 8% 5% 8% 5%;
 }
 
 .col1 img {
@@ -25,7 +25,7 @@
     width: 40%;
     height: 80%;
     padding: 8% 5% 8% 0%;
-    
+
 }
 
 .item {
@@ -46,12 +46,13 @@
     font-family: 'Courier New', Courier, monospace;
     text-align: center !important;
     height: 30px;
-    line-height: 30px;
+    font-size: 12px;
 }
 
 .company {
     color: rgb(100, 100, 100);
-    font-size: 14px;;
+    font-size: 14px;
+    ;
     // height: 10%;
     // background-color: aqua;
 }

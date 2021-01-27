@@ -12,19 +12,27 @@ export interface PortfolioData {
 interface PortfolioCardProps {
     onClick: () => void,
     data: PortfolioData,
-    className?: string
+    className?: string,
+    type: "web" | "mobile"
 }
 export default function PortfolioCard(props: PortfolioCardProps) {
-    const { onClick, className, data } = props
+    const { onClick, className, data, type } = props
     const { company, descripts, devDate, skill, thumbNailImgSrc, title } = data
     return <div className={`${className} ${style.container}`} onClick={onClick}>
         <div className={style.col1}>
             <img className={style.item} src={thumbNailImgSrc}></img>
-            <div className={`${style.item} ${style.title}`}>{data.title}</div>
-            <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
+            {type === "web" ? <>
+                <div className={`${style.item} ${style.title}`}>{data.title}</div>
+                <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
+            </> : <></>}
+
         </div>
 
         <div className={style.col2}>
+            {type === "mobile" ? <>
+                <div className={`${style.item} ${style.title}`}>{data.title}</div>
+                <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
+            </> : <></>}
             {descripts.map((descript, index) => {
                 return <div className={`${style.item} ${style.descript}`} key={index}>{descript}</div>
             })}
