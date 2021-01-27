@@ -31,7 +31,7 @@ const abilityData: CareerGraphData[] = [
 const skillData: CareerGraphData[] = [
     { name: 'TypeScript', level: 4 },
     { name: 'React', level: 4 },
-    { name: 'Nodejs express', level: 4 },
+    { name: 'Nodejs express', level: 3.5 },
     { name: 'MSSQL', level: 3.5 },
     { name: 'Redux', level: 3 },
     { name: 'ASP.NET', level: 3 },
@@ -80,11 +80,11 @@ function WebCareerPage() {
             <div className={style.skill}>
                 <div className={`${style.layout} ${style.ability}`} >
                     <div className={`${style['subTitle']}`}>Ability</div>
-                    <CareerGraph data={abilityData} />
+                    <CareerGraph data={abilityData} barColor={"#8884d8"} />
                 </div>
                 <div className={`${style.layout} ${style.language}`}>
                     <div className={`${style['subTitle']}`}>Skill</div>
-                    <CareerGraph data={skillData} />
+                    <CareerGraph data={skillData} barColor={"#8884d8"} />
                 </div>
             </div>
             <div className={style.project}>

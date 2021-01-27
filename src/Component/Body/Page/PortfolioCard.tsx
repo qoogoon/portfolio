@@ -19,7 +19,7 @@ export default function PortfolioCard(props: PortfolioCardProps) {
     const { company, descripts, devDate, skill, thumbNailImgSrc, title } = data
     return <div className={`${className} ${style.container}`} onClick={onClick}>
         <div className={style.col1}>
-            <img src={thumbNailImgSrc}></img>
+            <img className={style.item} src={thumbNailImgSrc}></img>
             <div className={`${style.item} ${style.title}`}>{data.title}</div>
             <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
         </div>

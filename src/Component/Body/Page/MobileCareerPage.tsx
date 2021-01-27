@@ -14,33 +14,20 @@ import WebImg003 from "../../../Resource/web/phc/003.jpg"
 import WebImg004 from "../../../Resource/web/phc/004.jpg"
 import WebImg005 from "../../../Resource/web/phc/005.jpg"
 
+import TimeLineImg from "../../../Resource/timeline.png"
+
 import WebImg101 from "../../../Resource/web/novel/001.png"
 import WebImg201 from "../../../Resource/web/otaku/001.png"
 
-interface CardItem {
-    title: string;
-    content: string;
-    imgSrc?: string;
-}
-
-
-
-const abilityData: CareerGraphData[] = [
-    { name: 'FrontEnd', level: 4 },
-    { name: 'BackEnd', level: 4 },
-    { name: 'Design', level: 1.5 },
-    { name: 'Animation', level: 1 },
-];
 const skillData: CareerGraphData[] = [
-    { name: 'TypeScript', level: 4 },
-    { name: 'React', level: 4 },
-    { name: 'Nodejs express', level: 4 },
+    { name: 'Android', level: 4 },
+    { name: 'Kotlin', level: 4 },
+    { name: 'Java', level: 4 },
+    { name: 'Nodejs express', level: 3.5 },
     { name: 'MSSQL', level: 3.5 },
-    { name: 'Redux', level: 3 },
+    { name: 'RXAndroid', level: 3 },
     { name: 'ASP.NET', level: 3 },
     { name: 'PostgreSQL', level: 2.5 },
-    { name: 'CSS', level: 2.5 },
-    { name: 'SCSS', level: 1 },
 ];
 const webPortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
@@ -79,15 +66,16 @@ function MobileCareerPage() {
     const [imgMode, setImgMode] = React.useState<"web" | "mobile">("web");
     return (
         <div className={`${style.Career} ${styleMobile.Career}`}>
-            <div className={style.title}>{"Web Skill & Project"}</div>
+            <div className={style.title}>{"Mobile Skill & Project"}</div>
             <div className={style.skill}>
-                <div className={`${style.layout} ${style.ability}`} >
+                <div className={`${style.layout} ${styleMobile.ability}`} >
                     <div className={`${style['subTitle']}`}>Ability</div>
-                    <CareerGraph data={abilityData} />
+                    <CareerGraph data={skillData} barColor={"#84bb74"} />
                 </div>
-                <div className={`${style.layout} ${style.language}`}>
-                    <div className={`${style['subTitle']}`}>Skill</div>
-                    <CareerGraph data={skillData} />
+                <div className={`${style.layout} ${styleMobile.timeline}`}>
+                    {/* <img src={TimeLineImg} /> */}
+                    {/* <div className={`${style['subTitle']}`}>Skill</div>
+                    <CareerGraph data={skillData} barColor={"#84bb74"} /> */}
                 </div>
             </div>
             <div className={style.project}>

@@ -9,14 +9,15 @@ export interface CareerGraphData {
 }
 interface CareerGraphProps {
     data: CareerGraphData[]
+    barColor?: string;
 }
 export default function CareerGraph(props: CareerGraphProps) {
-    const { data } = props
-    return <ResponsiveContainer width="95%" height={400}>
+    const { data, barColor } = props
+    return <ResponsiveContainer width="95%" height="90%">
         <BarChart
             data={data}
             margin={{
-                top: 30, right: 20, left: 0, bottom: 30,
+                top: 0, right: 0, left: 0, bottom: 0,
             }}
         >
             <CartesianGrid strokeDasharray="3 3" />
@@ -24,7 +25,7 @@ export default function CareerGraph(props: CareerGraphProps) {
             <YAxis domain={[0, 5]} ticks={[0, 1, 2, 3, 4, 5]} />
             <Tooltip />
             <Legend />
-            <Bar dataKey="level" fill="#8884d8" max={5} />
+            <Bar dataKey="level" fill={barColor} max={5} />
         </BarChart>
     </ResponsiveContainer>
 }

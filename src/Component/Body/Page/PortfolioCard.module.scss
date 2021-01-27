@@ -1,31 +1,35 @@
 .container {
     display: flex !important;
     cursor: pointer;
+    overflow-y: hidden;
 }
 
 .col1 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 60%;
-    height: 80%;
-    padding: 5%;
+    height: auto;
+    padding: 8% 5% 8% 5% ;
 }
 
 .col1 img {
     display: inline-block;
-    vertical-align: middle;
     width: 100%;
 }
 
 .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 40%;
     height: 80%;
-    padding: 5% 5% 5% 0%;
-    display: inline-block;
+    padding: 8% 5% 8% 0%;
+    
 }
 
 .item {
-    width: 100%;
+    width: 100% !important;
     // white-space: pre;
     text-align: left;
 }
@@ -41,12 +45,13 @@
 .devDate {
     font-family: 'Courier New', Courier, monospace;
     text-align: center !important;
+    height: 30px;
+    line-height: 30px;
 }
 
 .company {
     color: rgb(100, 100, 100);
-    font-size: 14px;
-
+    font-size: 14px;;
     // height: 10%;
     // background-color: aqua;
 }
@@ -56,7 +61,7 @@
     font-size: 15px;
     color: rgb(100, 100, 100);
     text-overflow: initial;
-    padding-bottom: 10px;
+
 }
 
 .skill {
