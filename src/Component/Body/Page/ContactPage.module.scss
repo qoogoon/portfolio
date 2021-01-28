@@ -1,5 +1,6 @@
 .layout {
-    background-color: gray;
+    background-color: rgb(231, 231, 231);
+    // background-color: gray;
     // display: table;
     // flex-wrap: wrap;
     // flex-direction: row;
@@ -14,7 +15,7 @@
 .contact {
     display: table-column;
     width: 100% !important;
-    color: white;
+    color: rgb(82, 84, 175);
     font-size: 54px;
     font-weight: bold;
 }

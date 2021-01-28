@@ -15,9 +15,11 @@ interface Props {
     onClose: () => void;
     imgList: string[];
     mode: "web" | "mobile"
+    description: string[],
+    title: string
 }
 export default function ImageSlideDialog(props: Props) {
-    const { onClose, open, imgList, mode } = props
+    const { onClose, open, imgList, mode, description, title } = props
     console.log(imgList)
     return <Dialog
         className={style.ImageSlideDialog}
@@ -28,7 +30,13 @@ export default function ImageSlideDialog(props: Props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
     >
-        <div>
+        <div className={style.container}>
+            <div className={style.title}>{title}</div>
+            <div className={style.descrition}>
+                {description.map((text, index) => {
+                    return <div key={index} >{text}</div>
+                })}
+            </div>
             <Swiper
                 mousewheel={true}
                 pagination={{ clickable: true }}
@@ -39,9 +47,12 @@ export default function ImageSlideDialog(props: Props) {
                         <div>
                             <img className={mode === "web" ? style.webImage : style.mobileImage} src={img} />
                         </div>
+
                     </SwiperSlide>
                 })}
+
             </Swiper>
+
         </div>
 
 

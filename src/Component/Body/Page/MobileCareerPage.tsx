@@ -121,7 +121,9 @@ function MobileCareerPage() {
                 open={isImgPortfolioOpen}
                 onClose={() => { setImgPortfolioOpen(false) }}
                 imgList={imgRouteList}
-                mode={imgMode} />
+                mode={imgMode}
+                description={mobilePortfolio1.descripts}
+                title={mobilePortfolio1.title} />
         </div>
     )
 }

@@ -111,7 +111,9 @@ function WebCareerPage() {
                 open={isImgPortfolioOpen}
                 onClose={() => { setImgPortfolioOpen(false) }}
                 imgList={imgRouteList}
-                mode={imgMode} />
+                mode={imgMode}
+                description={webPortfolio1.descripts}
+                title={webPortfolio1.title} />
         </div>
     )
 }
