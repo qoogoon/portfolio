@@ -1,12 +1,12 @@
 import React from "react"
+// import style from "./CareerPage.module.scss"
 import style from "./CareerPage.module.scss"
-import styleWeb from "./WebCareerPage.module.scss"
 //#region Component
 import ImageSlideDialog from "../../Common/ImageSlideDialog"
-import PortfolioCard, { PortfolioData } from "./PortfolioCard"
+import PortfolioCard_New2, { PortfolioData } from "./PortfolioCard"
 import CareerGraph, { CareerGraphData } from "./CareerGraph"
 //#endregion
-
+import back1 from "../../../Resource/back1.jpg"
 import WebImg001 from "../../../Resource/web/phc/001.jpg"
 import WebImg002 from "../../../Resource/web/phc/002.jpg"
 import WebImg003 from "../../../Resource/web/phc/003.jpg"
@@ -15,38 +15,25 @@ import WebImg005 from "../../../Resource/web/phc/005.jpg"
 
 import WebImg101 from "../../../Resource/web/novel/001.png"
 import WebImg201 from "../../../Resource/web/otaku/001.png"
-
-interface CardItem {
-    title: string;
-    content: string;
-    imgSrc?: string;
-}
-
-const abilityData: CareerGraphData[] = [
-    { name: 'FrontEnd', level: 4 },
-    { name: 'BackEnd', level: 4 },
-    { name: 'Design', level: 1.5 },
-    { name: 'Animation', level: 1 },
-];
-const skillData: CareerGraphData[] = [
-    { name: 'TypeScript', level: 4 },
-    { name: 'React', level: 4 },
-    { name: 'Nodejs express', level: 3.5 },
-    { name: 'MSSQL', level: 3.5 },
-    { name: 'Redux', level: 3 },
-    { name: 'ASP.NET', level: 3 },
-    { name: 'CSS', level: 2.5 },
-    { name: 'SCSS', level: 1 },
+const webSkillData: CareerGraphData[] = [
+    { name: 'TypeScript', level: 80 },
+    { name: 'React', level: 80 },
+    { name: 'Nodejs express', level: 70 },
+    { name: 'MSSQL', level: 70 },
+    { name: 'Redux', level: 60 },
+    { name: 'ASP.NET', level: 60 },
+    { name: 'CSS', level: 50 },
+    { name: 'SCSS', level: 20 },
 ];
 const webPortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
     descripts:
-        [`현대 1차벤더 조립라인의 데이터를 정보화하여 실시간 정보 및 분석도구 제공.`,
+        [`공장 조립라인의 데이터를 정보화하여 실시간 정보 및 분석도구 제공.`,
             `실시간으로 쏟아져나오는 라인의 데이터를 가공하여, 사용자에게 표와 그래프로 정보를 가공.`],
     devDate: "2020/05/03 ~ 2021/01/26",
-    skill: "#React #ASP.NET #MSSQL #SCSS",
+    skill: "#React #ASP.NET #MSSQL #SCSS 　　　　　　　　　　　　",
     thumbNailImgSrc: WebImg001,
-    title: "스마트팩토리\nDashBoard & Analysis"
+    title: "스마트팩토리\nDashBoard Web"
 }
 const webPortfolio2: PortfolioData = {
     company: "개인프로젝트(개발중)",
@@ -56,7 +43,7 @@ const webPortfolio2: PortfolioData = {
     devDate: "2020/03/03 ~ ",
     skill: "#React #Redux #Konvajs #FireStore(NoSql) #Firebase Function(NoServer) ",
     thumbNailImgSrc: WebImg101,
-    title: "소설게임 생성툴"
+    title: "소설게임 생성툴 Web"
 }
 const webPortfolio3: PortfolioData = {
     company: "개인프로젝트",
@@ -66,45 +53,53 @@ const webPortfolio3: PortfolioData = {
     devDate: "2015/02/19 ~ ",
     skill: "#React #Redux #Nodejs express #MS-SQL #Firebase",
     thumbNailImgSrc: WebImg201,
-    title: "오덕 테스트 커뮤니티 반응형 웹"
+    title: "매니아 테스트 커뮤니티 반응형 Web"
 }
-
 function WebCareerPage() {
     const [isImgPortfolioOpen, setImgPortfolioOpen] = React.useState(false);
     const [imgRouteList, setImgRouteList] = React.useState<string[]>([]);
     const [imgMode, setImgMode] = React.useState<"web" | "mobile">("web");
+    const [title, setTitle] = React.useState<string>("");
+    const [descripts, setDescripts] = React.useState<string[]>([]);
     return (
-        <div className={`${style.Career} ${styleWeb.Career}`}>
-            <div className={style.title}>{"Web Skill & Project"}</div>
-            <div className={style.skill}>
-                <div className={`${style.layout} ${style.ability}`} >
-                    <div className={`${style['subTitle']}`}>Ability</div>
-                    <CareerGraph data={abilityData} barColor={"#8884d8"} />
-                </div>
-                <div className={`${style.layout} ${style.language}`}>
-                    <div className={`${style['subTitle']}`}>Skill</div>
-                    <CareerGraph data={skillData} barColor={"#8884d8"} />
-                </div>
-            </div>
-            <div className={style.project}>
-                <PortfolioCard className={style.item} data={webPortfolio1} type="web" onClick={
-                    () => {
-                        setImgPortfolioOpen(true)
-                        setImgRouteList([WebImg001, WebImg002, WebImg003, WebImg004, WebImg005])
-                        setImgMode("web")
-                    }
-                } />
-                <PortfolioCard className={style.item} data={webPortfolio3} type="web" onClick={
-                    () => {
-                        window.location.assign("https://www.otakutest.kr");
-                    }
-                } />
-                <PortfolioCard className={style.item} data={webPortfolio2} type="web" onClick={
-                    () => {
-                        window.location.assign("http://www.kumestudio.com:8080");
+        <div>
+            <img className={style.background} src={back1} />
+            <div className={style.Career}>
+                <div className={`${style.layout} ${style.web}`}>
+                    <div className={style.title} style={{ backgroundColor: "#84bb74" }}>Web</div>
+                    <div className={style.content}>
+                        <div className={`${style.card} ${style.graph}`}>
+                            <CareerGraph data={webSkillData} barColor={"#84bb74"} />
+                        </div>
+                        <div className={`${style.card} ${style.portfoilo}`}>
+                            <PortfolioCard_New2 className={style.item} data={webPortfolio1} type="web" onClick={
+                                () => {
+                                    setImgPortfolioOpen(true)
+                                    setImgRouteList([WebImg001, WebImg002, WebImg003, WebImg004, WebImg005])
+                                    setImgMode("web")
+                                    setDescripts(webPortfolio1.descripts)
+                                    setTitle(webPortfolio1.title)
 
-                    }
-                } />
+                                }
+                            } />
+                        </div>
+                        <div className={`${style.card} ${style.portfoilo}`}>
+                            <PortfolioCard_New2 className={style.item} data={webPortfolio3} type="web" onClick={
+                                () => {
+                                    window.location.assign("https://www.otakutest.kr");
+                                }
+                            } />
+                        </div>
+                        <div className={`${style.card} ${style.portfoilo}`}>
+                            <PortfolioCard_New2 className={style.item} data={webPortfolio2} type="web" onClick={
+                                () => {
+                                    window.location.assign("http://www.kumestudio.com:8080");
+
+                                }
+                            } />
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <ImageSlideDialog
@@ -112,8 +107,8 @@ function WebCareerPage() {
                 onClose={() => { setImgPortfolioOpen(false) }}
                 imgList={imgRouteList}
                 mode={imgMode}
-                description={webPortfolio1.descripts}
-                title={webPortfolio1.title} />
+                description={descripts}
+                title={title} />
         </div>
     )
 }

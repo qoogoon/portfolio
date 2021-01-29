@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
 export interface CareerGraphData {
@@ -24,9 +24,6 @@ export default function CareerGraph(props: CareerGraphProps) {
             }}
         >
             <CartesianGrid strokeDasharray="3 3" />
-            {/* <YAxis domain={[0, 5]} ticks={[0, 1, 2, 3, 4, 5]} />
-            <XAxis dataKey="name" /> */}
-            {/* <XAxis domain={[0, 5]} ticks={[0, 1, 2, 3, 4, 5]} /> */}
             <YAxis type={"category"} dataKey="name" />
             <XAxis type="number" domain={[0, 5]} ticks={[0, 20, 40, 60, 80, 100]} orientation={"top"} />
             <Tooltip />

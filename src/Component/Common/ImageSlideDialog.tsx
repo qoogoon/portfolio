@@ -1,6 +1,8 @@
 import React from "react";
 import { Dialog, DialogActions, DialogContent, DialogContentText } from "@material-ui/core"
 import style from "./ImageSlideDialog.module.scss"
+import { isMobile } from "react-device-detect";
+
 //#region Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
@@ -22,7 +24,7 @@ export default function ImageSlideDialog(props: Props) {
     const { onClose, open, imgList, mode, description, title } = props
     console.log(imgList)
     return <Dialog
-        className={style.ImageSlideDialog}
+        className={`${style.ImageSlideDialog} ImageSlideDialog`}
         fullWidth={true}
         maxWidth={mode === "web" ? 'lg' : 'sm'}
         open={open}

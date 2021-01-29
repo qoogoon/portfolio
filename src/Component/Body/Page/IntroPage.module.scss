@@ -1,5 +1,6 @@
 .intro {
-    display: flex;
+    display: flex ;
+    height: 100vh;
 }
 
 
@@ -113,6 +114,7 @@
 
     .intro {
         display: block;
+        overflow-y: scroll;
     }
 
     .intro>.title {
@@ -162,14 +164,7 @@
         margin-bottom: 5vh;
     }
 
-    .swiper-scrollbar {
-        position: absolute !important;
-        bottom: 1px !important;
-    }
-
-    .swiper-container {
-        overflow: scroll !important;
-    }
+   
 
     .intro>.title>img {
 

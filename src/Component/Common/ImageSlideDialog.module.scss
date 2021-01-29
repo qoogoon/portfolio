@@ -34,3 +34,14 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+@media all and (max-width: 1000px) {
+    .webImage {
+    }
+    
+    
+    .mobileImage {
+        max-height: 400px;
+    }
+}
+

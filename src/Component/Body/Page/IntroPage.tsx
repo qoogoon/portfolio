@@ -2,7 +2,6 @@ import React from "react"
 import style from "./IntroPage.module.scss"
 import IntroImage from "Resource/intro.png"
 import { Card, CardContent, Typography } from "@material-ui/core"
-import AddIcon from "@material-ui/icons/Add";
 import MabinogiImg from "../../../Resource/mabinogi.png"
 import AndroidImg from "../../../Resource/android.png"
 import ReactImg from "../../../Resource/react.png"

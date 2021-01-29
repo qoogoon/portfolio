@@ -16,28 +16,16 @@ interface PortfolioCardProps {
     type: "web" | "mobile"
 }
 export default function PortfolioCard(props: PortfolioCardProps) {
-    const { onClick, className, data, type } = props
-    const { company, descripts, devDate, skill, thumbNailImgSrc, title } = data
+    const { onClick, className, data } = props
+    const { company, devDate, skill, thumbNailImgSrc, title } = data
     return <div className={`${className} ${style.container}`} onClick={onClick}>
         <div className={style.col1}>
             <img className={style.item} src={thumbNailImgSrc}></img>
-            {type === "web" ? <>
-                <div className={`${style.item} ${style.title}`}>{data.title}</div>
-                <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
-            </> : <></>}
 
-        </div>
-
-        <div className={style.col2}>
-            {type === "mobile" ? <>
-                <div className={`${style.item} ${style.title}`}>{data.title}</div>
-                <div className={`${style.item} ${style.devDate}`}>{data.devDate}</div>
-            </> : <></>}
-            {descripts.map((descript, index) => {
-                return <div className={`${style.item} ${style.descript}`} key={index}>{descript}</div>
-            })}
-            <div className={`${style.item} ${style.company}`}>{data.company}</div>
-            <div className={`${style.item} ${style.skill}`}>{data.skill}</div>
+            <div className={`${style.item} ${style.title}`}>{title}</div>
+            <div className={`${style.item} ${style.devDate}`}>{devDate}</div>
+            <div className={`${style.item} ${style.company}`}>{company}</div>
+            <div className={`${style.item} ${style.skill}`}>{skill}</div>
         </div>
     </div>
 }
