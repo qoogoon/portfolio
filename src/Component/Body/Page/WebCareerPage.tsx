@@ -16,14 +16,11 @@ import WebImg005 from "../../../Resource/web/phc/005.jpg"
 import WebImg101 from "../../../Resource/web/novel/001.png"
 import WebImg201 from "../../../Resource/web/otaku/001.png"
 const webSkillData: CareerGraphData[] = [
+    { name: 'ASP.NET', level: 90 },
+    { name: 'MSSQL', level: 90 },
     { name: 'TypeScript', level: 80 },
     { name: 'React', level: 80 },
     { name: 'Nodejs express', level: 70 },
-    { name: 'MSSQL', level: 70 },
-    { name: 'Redux', level: 60 },
-    { name: 'ASP.NET', level: 60 },
-    { name: 'CSS', level: 50 },
-    { name: 'SCSS', level: 20 },
 ];
 const webPortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
@@ -63,7 +60,7 @@ function WebCareerPage() {
     const [descripts, setDescripts] = React.useState<string[]>([]);
     return (
         <div>
-            <img className={style.background} src={back1} />
+            {/* <img className={style.background} src={back1} /> */}
             <div className={style.Career}>
                 <div className={`${style.layout} ${style.web}`}>
                     <div className={style.title} style={{ backgroundColor: "#84bb74" }}>Web</div>

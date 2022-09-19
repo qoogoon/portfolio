@@ -1,7 +1,7 @@
 .Career {
-    height: 100%;
-    position: absolute;
-    top: 25vh;
+    height: 100vh;
+    position: relative;
+    background-color: #202020;
 
 }
 
@@ -12,9 +12,12 @@
 }
 
 .layout {
-    height: 46%;
+    top: 20vh;
+    height: 50vh;
     width: auto;
     padding: 1% 1% 1% 1%;
+    position: absolute;
+    background-color: #2a2a2a !important;
 }
 
 .content {
@@ -49,8 +52,9 @@
 }
 
 .card {
-    background-color: white;
-    box-shadow: 0px 0px 1.5px rgb(37, 37, 37);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -68,10 +72,9 @@
     height: auto;
     width: fit-content;
     font-size: 30px;
-    color: white;
+    font-weight: bold;
     margin-left: 20px;
     padding: 0px 10px 0px 10px;
-    background-color: black;
 }
 
 @media all and (max-width: 1000px) {

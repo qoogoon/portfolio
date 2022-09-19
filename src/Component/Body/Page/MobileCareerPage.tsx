@@ -28,10 +28,7 @@ const mobileSkillData: CareerGraphData[] = [
     { name: 'Android', level: 80 },
     { name: 'Kotlin', level: 80 },
     { name: 'Java', level: 80 },
-    { name: 'Nodejs express', level: 70 },
-    { name: 'MSSQL', level: 70 },
     { name: 'RXAndroid', level: 60 },
-    { name: 'ASP.NET', level: 60 },
 ];
 const mobilePortfolio1: PortfolioData = {
     company: "근무처 : 유디엠텍",
@@ -69,7 +66,7 @@ function WebCareerPage() {
     const [imgMode, setImgMode] = React.useState<"web" | "mobile">("web");
     return (
         <div>
-            <img className={style.background} src={back2} />
+            {/* <img className={style.background} src={back2} /> */}
             <div className={style.Career}>
                 <div className={`${style.layout} ${style.mobile}`}>
                     <div className={style.title} style={{ backgroundColor: "#8884d8" }}>Android</div>

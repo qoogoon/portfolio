@@ -22,12 +22,13 @@ export default function CareerGraph(props: CareerGraphProps) {
             margin={{
                 top: 0, right: 0, left: 30, bottom: 0,
             }}
+
         >
             <CartesianGrid strokeDasharray="3 3" />
             <YAxis type={"category"} dataKey="name" />
             <XAxis type="number" domain={[0, 5]} ticks={[0, 20, 40, 60, 80, 100]} orientation={"top"} />
             <Tooltip />
-            <Bar dataKey="level" fill={barColor} />
+            <Bar dataKey="level" fill={barColor} isAnimationActive={true} />
         </BarChart>
     </ResponsiveContainer>
 }

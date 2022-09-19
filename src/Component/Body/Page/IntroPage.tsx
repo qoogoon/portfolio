@@ -18,7 +18,7 @@ interface CardItem {
 const cards: CardItem[] = [
     {
         title: "Web Developer",
-        content: "React, Redux, TypeScript, Nodejs express, ASP.NET",
+        content: "ASP.NET, Nodejs express, React, Redux, TypeScript",
         imgSrc: ReactImg
     },
     {
@@ -28,12 +28,12 @@ const cards: CardItem[] = [
     },
     {
         title: "개발경력",
-        content: "4년차 개발자",
+        content: "6년차 개발자",
         imgSrc: CareerImg
     },
     {
         title: "거주지",
-        content: "수원",
+        content: "수원, 광교",
         imgSrc: HomeImg
     },
     {
@@ -41,11 +41,11 @@ const cards: CardItem[] = [
         content: "게임, 웹툰",
         imgSrc: HobbyImg
     },
-    {
-        title: "밀레시안",
-        content: "누렙 13,192 ",
-        imgSrc: MabinogiImg
-    }
+    // {
+    //     title: "밀레시안",
+    //     content: "누렙 13,192 ",
+    //     imgSrc: MabinogiImg
+    // }
 ]
 
 function IntroPage() {

@@ -61,8 +61,9 @@ export default function Body(props: Props) {
     return (
         <Swiper
             mousewheel={true}
-            pagination={{ clickable: isMobile }}
+            pagination={{ clickable: isMobile, }}
             navigation={isMobile}
+
         >
             {slides}
         </Swiper>)
