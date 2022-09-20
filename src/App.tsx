@@ -22,6 +22,7 @@ function App() {
       <Route path="/portfolio/web/only" exact={true} render={() => <Body mode="webOnly" />} />
       <Route path="/portfolio/mobile" exact={true} render={() => <Body mode="mobileFirst" />} />
       <Route path="/portfolio/mobile/only" exact={true} render={() => <Body mode="mobileOnly" />} />
+      <Route path="/portfolio/unity" exact={true} render={() => <Body mode="unity" />} />
     </BrowserRouter>
   )
 }

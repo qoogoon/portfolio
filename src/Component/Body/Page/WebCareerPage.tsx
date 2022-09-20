@@ -1,5 +1,4 @@
 import React from "react"
-// import style from "./CareerPage.module.scss"
 import style from "./CareerPage.module.scss"
 //#region Component
 import ImageSlideDialog from "../../Common/ImageSlideDialog"

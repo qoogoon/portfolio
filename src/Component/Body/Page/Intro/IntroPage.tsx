@@ -3,12 +3,12 @@ import style from "./IntroPage.module.scss"
 import IntroImage from "Resource/intro.png"
 import { Card, CardContent, Typography } from "@material-ui/core"
 import MabinogiImg from "../../../Resource/mabinogi.png"
-import CatImg from "../../../Resource/cat.gif"
-import AndroidImg from "../../../Resource/android.png"
-import ReactImg from "../../../Resource/react.png"
-import CareerImg from "../../../Resource/career.png"
-import HomeImg from "../../../Resource/home.png"
-import HobbyImg from "../../../Resource/hobby.png"
+import CatImg from "../../../../Resource/cat.gif"
+import AndroidImg from "../../../../Resource/android.png"
+import ReactImg from "../../../../Resource/react.png"
+import CareerImg from "../../../../Resource/career.png"
+import HomeImg from "../../../../Resource/home.png"
+import HobbyImg from "../../../../Resource/hobby.png"
 
 interface CardItem {
     title: string;
