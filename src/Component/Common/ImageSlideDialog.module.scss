@@ -1,3 +1,8 @@
+.container{
+    background-color: rgb(26, 26, 26);
+    overflow: hidden;
+}
+
 .ImageSlideDialog .swiper-slide {
     text-align: center !important;
 }
@@ -22,17 +27,21 @@
 
 .descrition {
     padding: 10px;
-    margin-top: 10px;
-    background-color: rgb(223, 223, 223);
-    border-radius: 1px;
+    background-color: rgb(206, 203, 195);
+    border-radius: 10px;
     text-align: center;
+    margin: 10px 5% 0px 5%;
+    font-weight: bold;
 }
 
 .title {
     text-align: center;
-    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 25px;
     font-weight: bold;
+    color: white;
+    // background-color: rgb(56, 56, 56);
 }
 
 @media all and (max-width: 1000px) {

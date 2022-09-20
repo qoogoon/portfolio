@@ -58,6 +58,7 @@ const mobilePortfolio3: PortfolioData = {
     title: "철판 사출 공장 작업자 패드"
 }
 
+
 function WebCareerPage() {
     const [isImgPortfolioOpen, setImgPortfolioOpen] = React.useState(false);
     const [imgRouteList, setImgRouteList] = React.useState<string[]>([]);
@@ -68,45 +69,47 @@ function WebCareerPage() {
         <div>
             {/* <img className={style.background} src={back2} /> */}
             <div className={style.Career}>
-                <div className={`${style.layout} ${style.mobile}`}>
-                    <div className={style.title} style={{ backgroundColor: "#8884d8" }}>Android</div>
-                    <div className={style.content}>
-                        <div className={`${style.card} ${style.graph}`}>
+                <div className={`${style.background} `}>
+                    <div className={`${style.layout} ${style.mobile}`}>
+                        <div className={style.title} style={{ backgroundColor: "#8884d8" }}>Android</div>
+                        <div className={style.content}>
+                            {/* <div className={`${style.card} ${style.graph}`}>
                             <CareerGraph data={mobileSkillData} barColor={"#8884d8"} />
-                        </div>
-                        <div className={`${style.card} ${style.portfoilo}`}>
-                            <PortfolioCard className={style.item} data={mobilePortfolio1} type="mobile" onClick={
-                                () => {
-                                    setImgPortfolioOpen(true)
-                                    setImgRouteList([MobileImg001, MobileImg002, MobileImg003, MobileImg004])
-                                    setImgMode("mobile")
-                                    setDescripts(mobilePortfolio1.descripts)
-                                    setTitle(mobilePortfolio1.title)
+                        </div> */}
+                            <div className={`${style.card} ${style.portfoilo}`}>
+                                <PortfolioCard className={style.item} data={mobilePortfolio1} type="mobile" onClick={
+                                    () => {
+                                        setImgPortfolioOpen(true)
+                                        setImgRouteList([MobileImg001, MobileImg002, MobileImg003, MobileImg004])
+                                        setImgMode("mobile")
+                                        setDescripts(mobilePortfolio1.descripts)
+                                        setTitle(mobilePortfolio1.title)
 
-                                }
-                            } />
-                        </div>
-                        <div className={`${style.card} ${style.portfoilo}`}>
-                            <PortfolioCard className={style.item} data={mobilePortfolio2} type="mobile" onClick={
-                                () => {
-                                    setImgPortfolioOpen(true)
-                                    setImgRouteList([MobileImg101, MobileImg102, MobileImg103, MobileImg105, MobileImg106, MobileImg107])
-                                    setImgMode("mobile")
-                                    setDescripts(mobilePortfolio2.descripts)
-                                    setTitle(mobilePortfolio2.title)
-                                }
-                            } />
-                        </div>
-                        <div className={`${style.card} ${style.portfoilo}`}>
-                            <PortfolioCard className={style.item} data={mobilePortfolio3} type="mobile" onClick={
-                                () => {
-                                    setImgPortfolioOpen(true)
-                                    setImgRouteList([MobileImg201])
-                                    setImgMode("mobile")
-                                    setDescripts(mobilePortfolio3.descripts)
-                                    setTitle(mobilePortfolio3.title)
-                                }
-                            } />
+                                    }
+                                } />
+                            </div>
+                            <div className={`${style.card} ${style.portfoilo}`}>
+                                <PortfolioCard className={style.item} data={mobilePortfolio2} type="mobile" onClick={
+                                    () => {
+                                        setImgPortfolioOpen(true)
+                                        setImgRouteList([MobileImg101, MobileImg102, MobileImg103, MobileImg105, MobileImg106, MobileImg107])
+                                        setImgMode("mobile")
+                                        setDescripts(mobilePortfolio2.descripts)
+                                        setTitle(mobilePortfolio2.title)
+                                    }
+                                } />
+                            </div>
+                            <div className={`${style.card} ${style.portfoilo}`}>
+                                <PortfolioCard className={style.item} data={mobilePortfolio3} type="mobile" onClick={
+                                    () => {
+                                        setImgPortfolioOpen(true)
+                                        setImgRouteList([MobileImg201])
+                                        setImgMode("mobile")
+                                        setDescripts(mobilePortfolio3.descripts)
+                                        setTitle(mobilePortfolio3.title)
+                                    }
+                                } />
+                            </div>
                         </div>
                     </div>
                 </div>

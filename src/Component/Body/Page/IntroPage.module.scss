@@ -1,7 +1,8 @@
 .intro {
     display: flex ;
-    height: 100vh;
+    height: 100%;
     color: aliceblue;
+    
 }
 
 
@@ -36,7 +37,7 @@
 
 /* summary */
 .intro>.summary {
-    width: 60%;
+    width: 100%;
     // background-color: rgb(228, 228, 228);
     background-color: #202020;
     /* height: 100vh; */
@@ -94,10 +95,6 @@
         width: 29% !important;
     }
 
-    /* .intro .summary .cards {
-        margin-left: 100px;
-        margin-right: 100px;
-    } */
 }
 
 @media all and (min-width: 1000px)and (max-width: 1700px) {

@@ -3,6 +3,7 @@ import style from "./IntroPage.module.scss"
 import IntroImage from "Resource/intro.png"
 import { Card, CardContent, Typography } from "@material-ui/core"
 import MabinogiImg from "../../../Resource/mabinogi.png"
+import CatImg from "../../../Resource/cat.gif"
 import AndroidImg from "../../../Resource/android.png"
 import ReactImg from "../../../Resource/react.png"
 import CareerImg from "../../../Resource/career.png"
@@ -17,6 +18,11 @@ interface CardItem {
 
 const cards: CardItem[] = [
     {
+        title: "안녕하세요!",
+        content: "개발자 '구본주'의 포트폴리오 사이트입니다.",
+        imgSrc: CatImg
+    },
+    {
         title: "Web Developer",
         content: "ASP.NET, Nodejs express, React, Redux, TypeScript",
         imgSrc: ReactImg
@@ -28,7 +34,7 @@ const cards: CardItem[] = [
     },
     {
         title: "개발경력",
-        content: "6년차 개발자",
+        content: "5년차 개발자",
         imgSrc: CareerImg
     },
     {
@@ -38,7 +44,7 @@ const cards: CardItem[] = [
     },
     {
         title: "취미",
-        content: "게임, 웹툰",
+        content: "게임(playing, making)",
         imgSrc: HobbyImg
     },
     // {
@@ -51,7 +57,7 @@ const cards: CardItem[] = [
 function IntroPage() {
     return (
         <div className={style.intro}>
-            <div className={`${style.layout} ${style.title}`}>
+            {/* <div className={`${style.layout} ${style.title}`}>
                 <img src={IntroImage} />
                 <div className={style.text}>
                     <div>
@@ -66,7 +72,7 @@ function IntroPage() {
                         }
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className={`${style.layout} ${style.summary}`}>
                 <div className={style.about} >
                     <div className={style.text}>{"About me"}</div>

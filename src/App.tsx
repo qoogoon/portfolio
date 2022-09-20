@@ -6,6 +6,15 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 
 function App() {
+  {
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        // Hide the address bar:
+        window.scrollTo(0, 1);
+      }, 0);
+    });
+  }
+
   return (
     <BrowserRouter>
       <Route path="/portfolio" exact={true} render={() => <Body mode="webFirst" />} />
